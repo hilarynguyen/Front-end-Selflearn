@@ -1,0 +1,34 @@
+<!-- 
+    CSS read from top to bottom
+    CSS sẽ lấy cái nào specific hơn, ví dụ: h1 và class header cùng đựoc lấy => lấy header
+    Nếu như trong từng cái id có set sẵn styles thì nó sẽ lấy trong styles
+ -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #header-id {
+            color:black;
+        }
+        .header{
+            color: red;
+        }
+        .header{
+            color: blue;
+        }
+        .text{
+            color:aqua;
+        }
+    </style> 
+</head>
+<body>
+    <h1 class="header" id="header-id">Header</h1>
+    <p class="text">Lorem ipsum, dolor sit amet consectetur adipisicing elit. 
+        Similique accusamus earum in aliquid, dolores optio neque eum omnis at
+        fugiat deserunt suscipit velit distinctio maiores sunt officiis reprehenderit soluta quis.</p>
+</body>
+</html>

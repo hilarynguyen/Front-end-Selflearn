@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Box Example</title>
+    <style>
+        .box-1 {
+            width: 200px;
+            height: 200px;
+            background-color: #f0f0f0;
+            border: 2px solid #ccc;
+            padding: 20px;
+            margin: 20px;
+            display: inline-block;
+            box-sizing: border-box; 
+            /* width, height: chỉ tính text, element
+            border-box: tính luôn cả border, padding */
+        }
+        .box-2 {
+            width: 200px;
+            height: 200px;
+            background-color:aqua;
+            border: 2px solid #ccc;
+            padding: 20px;
+            margin: 20px;
+            display: inline-block;
+        }
+
+        .parent {
+            background-color: aquamarine;
+            position: relative;
+            
+        }
+
+        .child-one-child{
+            /* position: relative; */
+            /* when apply relative, cho phép dịch chuyển các khối left, top khỏi flow của nó, bth khi dùng relative không có dùng left, top, right */
+            position: absolute; 
+            /* Khi muốn element đứng yên không moveround */
+            /* thường được dùng nhiều */
+            /* 1 children relative to the parent */
+            background-color:antiquewhite;
+        }
+
+        .child-two-child{
+            /* position: relative; */
+            background-color: royalblue;
+        }
+
+        .child-three-child{
+            /* position: relative; */
+            background-color:antiquewhite;
+        }
+    </style>
+</head>
+<body>
+    <div class="box-1">
+        <h2>Box 1</h2>
+        <p>This is the first box.</p>
+    </div>
+
+    <div class="box-2">
+        <h2>Box 2</h2>
+        <p>This is the second box.</p>
+    </div>
+
+    <div class="parent">Parent
+        <div class="child-one-child">One</div>
+        <div class="child-two-child">Two</div>
+        <div class="child-three-child">Three</div>
+    </div>
+</body>
+</html>

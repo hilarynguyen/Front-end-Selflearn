@@ -1,0 +1,86 @@
+<!-- - Basic CSS selectors
+- CSS pseudo classes/elements
+- Child selectors
+- Advanced Selectors -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* span,li.red{
+            background-color: aqua;
+        }
+        Lấy span, li tại class red */
+        /* div b {
+            background-color: aqua;
+        }
+        Lấy tất cả các b không quan tâm là direct child hay indirect */
+        /* div > b {
+            background-color: aqua;
+        }
+        Chỉ lấy b nào trực tiếp sau div , trong th này div theo sau là span rồi mới đến b nên không được */
+
+        /* li.red ~ li {
+            background: red;
+        }
+        Lấy tất cả li nào tương tự nằm sau li có name là red */
+        /* 
+        li.red + li {
+            background: red;
+        }
+        Lấy li nào tương tự nằm ngay sau li có name là red, ngay sau lun, nếu không có thì pass */ */
+        /* li:hover{
+            background-color: aqua;
+        }; */
+        /* input:focus{
+            border-color: aqua;
+            background-color:bisque;
+        }
+
+        Khi click vào input sẽ chuyển sang chế độ focus */
+/* 
+        input:checked{
+            background-color:bisque;
+        };
+        Select only input have checked attribute */
+
+        /* input:disabled{
+            margin: 50px;
+        } */
+
+        /* li:last-child {
+            background-color: aqua;
+        }; */
+
+        span:only-child{
+            background-color: aqua;
+        }
+
+        /* div.red::after{
+            content: " after";
+            background:red;
+            Add thêm text after vào sau text trong div có class red
+        } */
+    </style>
+</head>
+<body>
+    <input type="text" class="">
+    <input type="checkbox" class="">
+    <input disabled type="datetime" class="">
+    <div class="red">This is a div</div>
+    <span class="blue">This is a span</span>
+    <div><span>
+        <b>nested text</b>
+    </span></div>
+    <ul>
+        <li class="red">Items 1</li>
+        <li>Items 2</li>
+        <li>Items 3</li>
+    </ul>
+    
+</body>
+</html>

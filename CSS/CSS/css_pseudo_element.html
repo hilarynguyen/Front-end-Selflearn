@@ -1,0 +1,42 @@
+  <!DOCTYPE html>
+  <html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .required::before {
+            content: "*";
+            display:block;
+            width: 10px;
+            height: 10px;
+            background-color: brown;}
+
+/* Chi xuất hiện khi có content , và sẽ add vào trong label , trước name
+Nêú thế require bằng input thi sẽ không có xuất hiện vì input không có content, pseudo sẽ không xuất hiện khi không có content*/
+
+        [data-tooltip] {
+            position:  relative;
+        }
+
+        [data-tooltip]:hover::after {
+            content: attr(data-tooltip);
+            position: absolute;
+            top: 100%;
+            /* tootop at bottom */
+            left:0;
+            right:0;
+            margin-top: 5px;
+            padding: 5px;
+            background-color: lightgrey;
+        }
+
+        
+    </style>
+  </head>
+  <body>
+    <label class="required">Name</label>
+    <input type="text" required>
+    <button data-tooltip="Tooltip">Submit Form</button>
+  </body>
+  </html>
